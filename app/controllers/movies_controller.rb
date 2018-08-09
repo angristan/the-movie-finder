@@ -1,6 +1,7 @@
 class MoviesController < ApplicationController
   def search
-    # @movies = SearchMovie.new.perform
-    @movies = params[:title]
+    unless params[:title].nil?
+      @movies = SearchMovie.new(params[:title]).perform
+    end
   end
 end
