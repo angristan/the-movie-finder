@@ -1,0 +1,31 @@
+<h1>Welcome to the Movie Finder</h1>
+
+<p>Looking for some information about a movie? Enter its name!</p>
+
+<%= form_tag('/search', method: 'get') do %>
+  <div class="form-group">
+    <%= label_tag(:title, 'Search for:') %>
+    <%= text_field_tag(:title, nil, class: 'form-control w-25') %>
+  </div>
+  <%= submit_tag('Search', class: 'btn btn-primary') %>
+<% end %>
+
+<br>
+
+<% if !@movies.nil? %>
+  <% if @movies.empty? %>
+    <p>yo la recherche n'a rien donné</p>
+  <% else %>
+    <% @movies.each_with_index do |result, index| %>
+      <p class="font-weight-bold">Movie no. <%= index + 1 %></p>
+      <% result.each do |key, value| %>
+        <% if key == 'poster' %>
+          <%= image_tag "https://image.tmdb.org/t/p/w370_and_h556_bestv2/#{value}", width: 200 %>
+          <% break %>
+        <% end %>
+        <p><span style="text-decoration: underline"><%= key %>:</span> <span class="font-weight-light"><%= value %></span></p>
+      <% end %>
+    <hr>
+    <% end %>
+  <% end %>
+<% end %>
