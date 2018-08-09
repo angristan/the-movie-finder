@@ -1,2 +1,16 @@
-<h1>Movies#search</h1>
-<p>Find me in app/views/movies/search.html.erb</p>
+<h1>Welcome to the Movie Finder</h1>
+
+<p>Looking for some information about a movie? Enter its name!</p>
+
+<%= form_tag('/search', method: 'get') do %>
+  <div class="form-group">
+    <%= label_tag(:title, 'Search for:') %>
+    <%= text_field_tag(:title, nil, class: 'form-control w-25') %>
+  </div>
+  <%= submit_tag('Search', class: 'btn btn-primary') %>
+<% end %>
+
+<% unless @movies.nil? %>
+  <p>Salut <%= @movies %></p>
+<% end %>
+
