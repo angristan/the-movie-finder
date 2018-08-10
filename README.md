@@ -2,7 +2,7 @@
 
 ## Issue
 
-I put the link of the app in production that DOESN'T work... Désolé
+I put the link of the app in production that DOESN'T work... Désolé.  
 That's why I took a GIF as demo of my app, locally.
 
 ![demo gif](http://g.recordit.co/RHxJfM0Mx6.gif)
