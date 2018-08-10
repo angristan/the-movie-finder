@@ -1,24 +1,29 @@
-# README
+# The Movie Finder
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Issue
 
-Things you may want to cover:
+I put the link of the app in production that DOESN'T work... Désolé
+That's why I took a GIF as demo of my app, locally.
 
-* Ruby version
+![demo gif](http://g.recordit.co/RHxJfM0Mx6.gif)
 
-* System dependencies
+## Installation
 
-* Configuration
+- Clone the project
+- `bundle install`
+- Get your API Key (v3 auth) by signing up to [themoviedb](https://www.themoviedb.org/) site and follow this [tutorial](https://www.viget.com/articles/storing-secret-credentials-in-rails-5-2-and-up/) to set the key
 
-* Database creation
+Aften running `rails credentials:show`, you should have something like this:
 
-* Database initialization
+```
+# aws:
+#   access_key_id: 123
+#   secret_access_key: 345
 
-* How to run the test suite
+api_key_v3: xxxy-o-u-r--k-e-yxxxxx
 
-* Services (job queues, cache servers, search engines, etc.)
+# Used as the base secret for all MessageVerifiers in Rails, including the one protecting cookies.
+secret_key_base: t0t0t0t0t0t0t0t0t0t0t0t0t0t0t0t0t0t0t0t0t0t0t0t0t0t0t0t0t0t0t0t0t0t0t0t0t0t0t0t0t0t0t0t0t0
+```
 
-* Deployment instructions
-
-* ...
+- Run `rails s` and you are ready to go!
