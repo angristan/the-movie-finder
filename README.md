@@ -1,13 +1,5 @@
 # The Movie Finder
 
-## Issue
-
-I put the link of the app in production that DOESN'T work... Désolé.  
-That's why I took a GIF as demo of my app, locally.  
-Everything goes well (= no "Application Error" stuff) until I set the RAILS_MASTER_KEY key on production.
-
-![demo gif](http://g.recordit.co/RHxJfM0Mx6.gif)
-
 ## Installation
 
 - Clone the project
