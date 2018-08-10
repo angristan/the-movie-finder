@@ -1,5 +1,7 @@
 # The Movie Finder
 
+![demo gif](https://media.giphy.com/media/21T333re30gyka4mRq/giphy.gif)
+
 ## Installation
 
 - Clone the project
